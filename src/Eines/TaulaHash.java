@@ -76,7 +76,7 @@ public class TaulaHash {
 				rehash = true;
 			}
 		}
-		System.out.println("He salido");
+		
 	return taula;
 		
 	}

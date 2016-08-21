@@ -1,12 +1,14 @@
 package Eines;
 
+import java.io.Serializable;
+
 import Model.Node;
 import Model.Paraula;
 
 /**
  * Implementa una llista dinamica destudiants.
  */
-public class DynamicList {
+public class DynamicList{
 	private Node first;
 	private Node previous;
 	private int size;
@@ -164,10 +166,10 @@ public class DynamicList {
 	   //Col·loquem el PDI en la primerea posicio
 	   paraules.first();
 	   //Printem paraula i les vegades que surt
-	   while(!paraules.end()){
+	  /* while(!paraules.end()){
 		   System.out.println(paraules.get().getNom()+" "+paraules.get().getnAp());
 		   paraules.next();
-	   }
+	   }*/
 	   while(!aux.empty()){
 		   aux.first();
 		   //Crec que aqui fa falta un aux.next() o estem contant una repeticio de més
@@ -202,11 +204,11 @@ public class DynamicList {
 		   paraules.insertOrd(paraules, list.get(),2);
 		   list.next();
 	   }
-	   paraules.first();
+	   /*paraules.first();
 	   while(!paraules.end()){
 		   System.out.println("## "+paraules.get().getNom()+" , "+paraules.get().getnAp()+" ##");
 		   paraules.next();
-	   }
+	   }*/
 	  // System.out.println("## "+paraules.get().getNom()+" , "+paraules.get().getnAp()+" ##");
 	   return paraules;
    }
@@ -217,11 +219,11 @@ public class DynamicList {
 		   paraules.insertOrd(paraules, list.get(),1);
 		   list.next();
 	   }
-	   paraules.first();
+	   /*paraules.first();
 	   while(!paraules.end()){
 		   System.out.println("## "+paraules.get().getNom()+" , "+paraules.get().getnAp()+" ##");
 		   paraules.next();
-	   }
+	   }*/
 	  // System.out.println("## "+paraules.get().getNom()+" , "+paraules.get().getnAp()+" ##");
 	   return paraules;
    }

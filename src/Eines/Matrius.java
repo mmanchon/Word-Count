@@ -130,11 +130,11 @@ public class Matrius {
 		   iAux++;
 	   }
 
-	   iAux=0;
+	   /*iAux=0;
 	   while(iAux<iParaula){
 		   System.out.println("## "+aux[iAux].getNom()+" , "+aux[iAux].getnAp()+" ##");
 		   iAux++;
-	   }
+	   }*/
 	   return paraules;
    }
    public Paraula[] ordenaAlfabeticament(Paraula[] aux){
@@ -147,12 +147,12 @@ public class Matrius {
 		   iAux++;
 	   }
 
-	   iAux=0;
+	   /*iAux=0;
 	   System.out.println("@@"+iParaula);
 	   while(iAux<iParaula){
 		   System.out.println("## "+aux[iAux].getNom()+" , "+aux[iAux].getnAp()+" ##");
 		   iAux++;
-	   }
+	   }*/
 	   return paraules;
    }
   

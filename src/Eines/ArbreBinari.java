@@ -138,17 +138,17 @@ public class ArbreBinari {
 	
 	public void inordre(NodeArbre node){
 		if(node.getfillE()==null && node.getFillD()==null){
-			System.out.println(node.getKey()+" "+node.getValor());
+			//System.out.println(node.getKey()+" "+node.getValor());
 		}else{
 			if(node.getfillE()!=null){
 				inordre(node.getfillE());
-				System.out.println(node.getKey()+" "+node.getValor());
+			//	System.out.println(node.getKey()+" "+node.getValor());
 				if(node.getFillD()!=null){
 					inordre(node.getFillD());
 				}
 			}else{
 				inordre(node.getFillD());
-				System.out.println(node.getKey()+" "+node.getValor());
+				//System.out.println(node.getKey()+" "+node.getValor());
 			}
 		}
 	}

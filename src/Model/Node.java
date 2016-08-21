@@ -1,9 +1,15 @@
 package Model;
 
+import java.io.Serializable;
+
 /**
  * Implementa el node duna llista dinamica.
  */
-public class Node {
+public class Node{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private Paraula element;
 	private Node next;
 

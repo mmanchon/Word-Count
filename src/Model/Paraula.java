@@ -1,6 +1,8 @@
 package Model;
 
-public class Paraula {
+import java.io.Serializable;
+
+public class Paraula{
 	private int nAp;
 	private String nom;
 	public Paraula(String nom, int ap){

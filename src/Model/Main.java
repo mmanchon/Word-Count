@@ -1,13 +1,9 @@
 package Model;
 
-import View.Terminal;
-
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.DecimalFormat;
 import java.util.Scanner;
-
-import javax.print.attribute.Size2DSyntax;
 
 import Eines.ArbreBinari;
 import Eines.DynamicList;
@@ -16,10 +12,9 @@ import Eines.HTML;
 import Eines.Matrius;
 import Eines.NodeTaula;
 import Eines.TaulaHash;
+import View.Terminal;
 
 public class Main {
-	
-	
 
 	public static void main(String []args) throws IOException, URISyntaxException{
     	String[][] libro =null;
@@ -67,6 +62,7 @@ public class Main {
                         Terminal.menu(2);
                         tipusEstructura = sc.nextInt();
                         time_start = System.currentTimeMillis();
+                        Long startSize=Runtime.getRuntime().freeMemory();
                         switch(tipusEstructura){
                         case 1:
                     		ab = new ArbreBinari();
@@ -86,8 +82,10 @@ public class Main {
                         	break;
                         }
                         time_end = System.currentTimeMillis();
+                        Long endSize=Runtime.getRuntime().freeMemory();
                         time_final =( time_end - time_start)* 0.001;
-                        System.out.println("El temps total en guardar a set de "+decimals.format(time_final)+"s.");
+                        Float finalSize = ((float)(startSize-endSize)/1048576);
+                        System.out.println("El temps total en guardar a set de "+decimals.format(time_final)+"s. i s'ha utilitzat "+decimals.format(finalSize)+"Mb.");
                         		
                     }else{
                         Terminal.messages(4);
@@ -100,6 +98,7 @@ public class Main {
                         metodeOrdenacio= sc.nextInt();
                 		HTML html = new HTML();
                 		time_start2 = System.currentTimeMillis();
+                		Long startSize=Runtime.getRuntime().freeMemory();
                         switch(metodeOrdenacio){
                         case 1://Ordenacio per numero d'aparicions.
                         	switch(tipusEstructura){
@@ -137,6 +136,7 @@ public class Main {
                         	case 3:
                             	estructura = (DynamicList)dynList.ordenaAlfabeticament((DynamicList)estructura);
                         		html.html(2,estructura);
+                        		
                             	break;
                             case 4:  
                             	estructura = (Paraula[])matrius.ordenaAlfabeticament((Paraula[])estructura);
@@ -151,9 +151,10 @@ public class Main {
                         	System.out.println("Opcio introduida invalida.");
                         }
                         time_end2 = System.currentTimeMillis();
+                        Long endSize=Runtime.getRuntime().freeMemory();
                         time_final2 =( time_end2 - time_start2)* 0.001;
-                       
-                        System.out.println("El temps total en ordenar a set de "+decimals.format(time_final2)+"s.");
+                        Float finalSize = ((float)(startSize-endSize)/1048576);
+                        System.out.println("El temps total en ordenar a set de "+decimals.format(time_final2)+"s, i s'ha utilitzat "+decimals.format(finalSize)+"Mb.");
                         		
                     }else{
                         Terminal.messages(4);
